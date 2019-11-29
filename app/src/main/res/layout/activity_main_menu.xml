@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="411dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="106dp"
+        android:fontFamily="@font/amarante"
+        android:gravity="center"
+        android:text="@string/app_title"
+        android:textColor="@color/yellow"
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toDiceButton"
+        android:layout_width="138dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="43dp"
+        android:background="@color/dark_grey"
+        android:fontFamily="@font/amarante"
+        android:text="@string/roll_dice"
+        android:textColor="@color/yellow"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/toCharNotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+    <Button
+        android:id="@+id/toCharNotes"
+        android:layout_width="137dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="187dp"
+        android:background="@color/dark_grey"
+        android:fontFamily="@font/amarante"
+        android:text="@string/character_notes"
+        android:textColor="@color/yellow"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toDiceButton" />
+
+    <ImageView
+        android:id="@+id/rollDiceIcon"
+        android:layout_width="93dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="57dp"
+        android:contentDescription="@string/roll_dice"
+        app:layout_constraintBottom_toTopOf="@+id/charNoteIcon"
+        app:layout_constraintEnd_toStartOf="@+id/toDiceButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView"
+        app:srcCompat="@drawable/d20" />
+
+    <ImageView
+        android:id="@+id/charNoteIcon"
+        android:layout_width="79dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="170dp"
+        android:contentDescription="@string/character_notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toCharNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollDiceIcon"
+        app:srcCompat="@drawable/notes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

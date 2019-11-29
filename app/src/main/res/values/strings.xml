@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="dice_roll">Dice Roll</string>
+    <string name="roll">Roll</string>
+    <string name="result"> Result</string>
+    <string name="app_name">Dice Roll</string>
+    <string name="number"> Number </string>
+    <string name="d4">d4</string>
+    <string name="d6">d6</string>
+    <string name="d8">d8</string>
+    <string name="d10">d10</string>
+    <string name="d12">d12</string>
+    <string name="d20">d20</string>
+    <string name="result_num"> </string>
+    <string name="app_title"> Dungeons and Dragons Companion </string>
+    <string name="roll_dice">Roll Dice</string>
+    <string name="character_notes">Character Notes</string>
+    <string name="back_to_menu"> This goes back to the main menu screen </string>
+    <string name="hp"> Health Points</string>
+    <string name="ac"> Armor Class </string>
+    <string name="initiative">Initiative</string>
+    <string name="extra_notes">Extra Notes</string>
+    <string name="armor"> AC </string>4
+    <string name="health"> HP </string>
+    <string name="zero">0</string>
+    <string name="enter_num">Enter #</string>
+    <string name="save">Save Button</string>
+
+</resources>
