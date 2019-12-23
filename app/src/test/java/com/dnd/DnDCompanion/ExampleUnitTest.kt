@@ -1,4 +1,4 @@
-package com.example.diceroll
+package com.dnd.DnDCompanion
 
 import org.junit.Test
 

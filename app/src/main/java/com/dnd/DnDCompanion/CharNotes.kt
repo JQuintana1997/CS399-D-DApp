@@ -1,10 +1,11 @@
-package com.example.diceroll
+package com.dnd.DnDCompanion
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.widget.Toast
+import com.dnd.DnDCompanion.R
 import kotlinx.android.synthetic.main.activity_char_notes.*
 import kotlinx.android.synthetic.main.activity_main.backToMenu
 

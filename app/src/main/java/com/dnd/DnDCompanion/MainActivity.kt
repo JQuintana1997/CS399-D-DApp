@@ -1,9 +1,10 @@
-package com.example.diceroll
+package com.dnd.DnDCompanion
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.dnd.DnDCompanion.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity(){
             }
         // This is the total sum that will be displayed as the result when dice are rolled
         var totalSum = 0
-
+        val resultString = findViewById<TextView>(R.id.resultView)
 
 
 
@@ -141,8 +142,11 @@ class MainActivity : AppCompatActivity(){
             rollTwelve()
             rollTwenty()
 
-                val resultString = findViewById<TextView>(R.id.resultView)
+
                 if( totalSum != 0) {
+                    if(modifier.text.toString()!="") {
+                        totalSum += modifier.text.toString().toInt()
+                    }
                     resultString.setText(totalSum.toString())
                 }
                 else{
