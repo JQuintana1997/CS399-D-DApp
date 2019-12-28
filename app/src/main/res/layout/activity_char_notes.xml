@@ -15,13 +15,36 @@
 
         <LinearLayout
             android:id="@+id/linearLayout8"
-            android:layout_width="103dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
             app:layout_constraintStart_toEndOf="@+id/linearLayout7"
             app:layout_constraintTop_toBottomOf="@+id/charTitle">
+
+            <TextView
+                android:id="@+id/levelView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="@string/level"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/levelBox"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="25dp"
+                android:autofillHints=""
+                android:background="@color/grey"
+                android:ems="10"
+                android:hint="@string/level"
+                android:inputType="text"
+                android:saveEnabled="true" />
 
             <ImageView
                 android:id="@+id/armorClass"
@@ -32,21 +55,21 @@
 
             <EditText
                 android:id="@+id/armorBox"
-                android:layout_width="match_parent"
+                android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:autofillHints="@string/armor"
                 android:background="@color/grey"
                 android:ems="10"
                 android:hint="@string/armor"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:saveEnabled="true" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout5"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="98dp"
+            android:layout_height="404dp"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,12 +79,35 @@
                 android:id="@+id/charToDice"
                 android:layout_width="60dp"
                 android:layout_height="66dp"
+                android:layout_gravity="right"
                 android:layout_marginBottom="20dp"
                 android:adjustViewBounds="false"
                 android:backgroundTint="#00000000"
                 android:contentDescription="@string/dice_roll"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/d20" />
+
+            <TextView
+                android:id="@+id/classView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
+                android:text="@string/_class"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/classBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="25dp"
+                android:autofillHints=""
+                android:background="@color/grey"
+                android:ems="10"
+                android:hint="@string/_class"
+                android:inputType="text"
+                android:saveEnabled="true" />
 
             <ImageView
                 android:id="@+id/initiative"
@@ -72,13 +118,13 @@
 
             <EditText
                 android:id="@+id/initiativeBox"
-                android:layout_width="wrap_content"
+                android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:autofillHints="@string/initiative"
                 android:background="@color/grey"
                 android:ems="10"
                 android:hint="@string/initiative"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:saveEnabled="true" />
 
             <ImageButton
@@ -104,10 +150,33 @@
                 android:id="@+id/backToMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_marginBottom="35dp"
                 android:backgroundTint="#000000"
                 android:contentDescription="@string/back_to_menu"
                 app:srcCompat="@android:drawable/ic_menu_revert" />
+
+            <TextView
+                android:id="@+id/nameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
+                android:text="@string/name"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/nameBox"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="25dp"
+                android:autofillHints="@string/name"
+                android:background="@color/grey"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:saveEnabled="true" />
 
             <ImageView
                 android:id="@+id/healthPoints"
@@ -117,14 +186,26 @@
                 app:srcCompat="@drawable/health" />
 
             <EditText
-                android:id="@+id/healthBox"
-                android:layout_width="match_parent"
+                android:id="@+id/maxHealthBox"
+                android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:autofillHints="@string/health"
                 android:background="@color/grey"
                 android:ems="10"
+                android:hint="@string/max_health"
+                android:inputType="text"
+                android:saveEnabled="true" />
+
+            <EditText
+                android:id="@+id/healthBox"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="@string/health"
+                android:background="@color/grey"
+                android:ems="10"
                 android:hint="@string/health"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:saveEnabled="true" />
 
             <ImageView
@@ -141,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="95dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="96dp"
             android:fontFamily="@font/amarante"
             android:text="@string/character_notes_title"
