@@ -1,11 +1,15 @@
 package com.dnd.DnDCompanion
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.dnd.DnDCompanion.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_menu.*
 
 
 class MainActivity : AppCompatActivity(){
@@ -181,6 +185,36 @@ class MainActivity : AppCompatActivity(){
             modifier.setText("0")
         }
 
+        helpButton.setOnClickListener()
+        {
+            // build alert dialog
+            val dialogBuilder = AlertDialog.Builder(this)
+            // set message of alert dialog
+            dialogBuilder.setMessage(
+                ("Quick Roll: To quick roll a die, tap on the icon of the die that you would like to roll. \n" +
+                        "Multiple Dice: To roll multiple dice, enter the number of dice that you " +
+                        "would like to roll and then tap the ROLL button. \n" +
+                        "Modifier: If you have a modifier that you would like added to your roll enter" +
+                        "a value into the MODIFIER box to have it applied to the total.")
+            )
+                // if the dialog is cancelable
+                .setCancelable(false)
+                // positive button text and action
+                .setPositiveButton("Okay!", DialogInterface.OnClickListener { dialog, id ->
+                    dialog.cancel()
+                })
+                // negative button text and action
+                .setNegativeButton("", DialogInterface.OnClickListener { dialog, id ->
+                    dialog.cancel()
+                })
+
+            // create dialog box
+            val alert = dialogBuilder.create()
+            // set title for alert dialog box
+            alert.setTitle("How to Use")
+            // show alert dialog
+            alert.show()
+        }
     }
 
 }

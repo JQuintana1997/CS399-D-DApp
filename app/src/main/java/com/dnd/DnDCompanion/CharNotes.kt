@@ -75,14 +75,14 @@ class CharNotes : AppCompatActivity() {
 
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         //get data from shared preferences
-        val noteText = sharedPreferences.getString("NOTES", "Enter Notes")
-        val armor = sharedPreferences.getString("ARMOR", "AC")
-        val health = sharedPreferences.getString("HEALTH", "HP")
-        val initiative = sharedPreferences.getString("INITIATIVE", "INT")
-        val maxHealth = sharedPreferences.getString("MAXHEALTH", "MAX HP")
-        val name = sharedPreferences.getString("NAME", "NAME")
-        val level = sharedPreferences.getString("LEVEL", "LEVEL")
-        val charClass = sharedPreferences.getString("CLASS", "CLASS")
+        val noteText = sharedPreferences.getString("NOTES", "")
+        val armor = sharedPreferences.getString("ARMOR", "")
+        val health = sharedPreferences.getString("HEALTH", "")
+        val initiative = sharedPreferences.getString("INITIATIVE", "")
+        val maxHealth = sharedPreferences.getString("MAXHEALTH", "")
+        val name = sharedPreferences.getString("NAME", "")
+        val level = sharedPreferences.getString("LEVEL", "")
+        val charClass = sharedPreferences.getString("CLASS", "")
 
         // Changes all the editText components to their saved values
         charTextbox.setText(noteText)
