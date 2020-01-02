@@ -191,11 +191,12 @@ class MainActivity : AppCompatActivity(){
             val dialogBuilder = AlertDialog.Builder(this)
             // set message of alert dialog
             dialogBuilder.setMessage(
-                ("Quick Roll: To quick roll a die, tap on the icon of the die that you would like to roll. \n" +
-                        "Multiple Dice: To roll multiple dice, enter the number of dice that you " +
+                ("QUICK ROLL: To quick roll a die, tap on the icon of the die that you would like to roll. \n" +
+                        "\nMULTIPLE DICE: To roll multiple dice, enter the number of dice that you " +
                         "would like to roll and then tap the ROLL button. \n" +
-                        "Modifier: If you have a modifier that you would like added to your roll enter" +
-                        "a value into the MODIFIER box to have it applied to the total.")
+                        "\nMODIFIER: If you have a modifier that you would like added to your roll enter" +
+                        " a value into the Modifier box to have it applied to the total. The Modifier" +
+                        " number is NOT included in any quick rolls. \n")
             )
                 // if the dialog is cancelable
                 .setCancelable(false)
